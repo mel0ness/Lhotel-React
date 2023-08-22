@@ -1,0 +1,19 @@
+@use "../../Utils/variables";
+
+.footer {
+    background-color: variables.$color1;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    align-items: center;
+
+    & a {
+        text-decoration: none;
+        color: white;
+        padding-right: 10px;
+        }
+}
+

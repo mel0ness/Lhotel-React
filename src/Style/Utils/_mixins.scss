@@ -1,0 +1,9 @@
+@use "../Utils/variables";
+
+@mixin headerSelect {
+    color: variables.$color1;
+        background-color: variables.$color2;
+        border-radius: 10px;
+        height: 40px;
+
+}
