@@ -1,0 +1,123 @@
+@use "../../Utils/variables";
+
+
+.calque {
+
+    position: relative;
+    height: calc(100vw * 3 / 4);
+    margin: 2px;
+    
+    border-radius: 20%;
+
+    @media (min-width: 600px) {
+        width: 60%;
+        height: calc(60vw * 3 / 4);
+        margin: auto;
+        margin-top: 5px;
+    }
+
+    @media(min-width: 1000px) {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+    }
+    @media(min-width: 1440px) {
+     
+        height: 650px;
+    }
+ 
+
+    & img {
+        position: relative;
+       width: 100%;
+       height: 100%;
+        z-index: -1;
+        border-radius: 20%;
+
+        @media(min-width: 1000px) {
+            height: calc(60vw * 3 / 4);
+        }
+       
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        background-color: black ;
+        position: absolute;
+        opacity: 60%;
+        z-index: 1;
+        left:0;
+        top:0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20%;
+      border: solid 2px variables.$color1;
+      @media(min-width: 1000px) {
+        height: calc(60vw * 3 / 4);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+      @media(min-width: 1440px) {
+        height: 100%;
+    }
+
+    }
+
+    & .imageText {
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%, -50%);
+        font-family: 'Dancing Script', cursive;
+        font-size: 2rem;
+    }
+}
+
+.description {
+    font-family: "Roboto Mono", monospace;
+
+    @media(min-width: 1000px) {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    & .parag {
+        margin: 5px;
+        text-align: justify;
+        font-size: 0.8rem;
+        @media(min-width: 1000px) {
+            font-size: 1rem;
+        }
+        @media(min-width: 1300px) {
+            font-size: 1.2rem;
+        }
+        @media(min-width: 1600px) {
+            font-size: 1.4rem;
+        }
+    }
+
+    & .marque {
+        color: variables.$color1;
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+}
+
+.flexyBecome {
+    @media(min-width: 1000px) {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 50px;
+        margin: 20px;
+        height: 650px;
+    }
+    
+}

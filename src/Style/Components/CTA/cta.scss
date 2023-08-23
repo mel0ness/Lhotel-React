@@ -1,0 +1,80 @@
+@use "../../Utils/variables";
+@use "../../Utils/keyframes";
+
+.CTA {
+    margin-top: 30px;
+
+    @media(min-width: 768px) {
+        width: 60%;
+        margin: auto;
+        margin-top: 30px;
+    }
+    @media(min-width: 1200px) {
+        width: 40%;
+    }
+
+
+    & .directCTA {
+        margin: 10px;
+        background-color: variables.$color1;
+        border-radius: 50px;
+        height: 100px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        text-decoration: none;
+        box-shadow: 2px 2px black;
+        text-shadow: 1px 1px 2px black, 1px 1px 2px black;
+
+        @media(min-width: 1000px) {
+            font-size: 2rem;
+        }
+        @media(min-width: 1440px) {
+            font-size: 2.4rem;
+        }
+
+        &:active {
+            box-shadow: unset;
+            position: relative;
+            left: 2px;
+            top:2px;
+        }
+
+        & .loading {
+            width: 50px;
+    height: 50px;
+    margin: auto;
+    box-shadow: 2px 0 black;
+    border-radius: 100%;
+    border: solid 5px transparent;
+    border-top-color: white;
+    border-left-color: white;
+    animation: loading linear 800ms infinite both;
+
+        }
+    }
+
+    & .indirectCTA {
+margin: 10px;
+font-size: 1.1rem;
+border: 3px solid variables.$color1;
+padding: 10px;
+border-radius: 20px;
+
+@media(min-width: 1000px) {
+    font-size: 1.5rem;
+}
+@media(min-width: 1440px) {
+    font-size: 2rem;
+}
+
+    & a {
+        margin-top: 10px;
+        display: block;
+        text-decoration: none;
+        color: variables.$color1;
+    }
+}
+}
