@@ -1,0 +1,90 @@
+@use "../../Utils/variables";
+@use "../../Utils/keyframes";
+
+.galerie {
+    margin: auto;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 2px variables.$color1;
+    border-radius: 40px;
+    overflow: hidden;
+
+    & .animation250px166px {
+        animation: 12s Galerie250px ease-out infinite;
+        position: relative;
+
+        @media(min-width: 768px) {
+            animation: 12s Galerie500px ease-out infinite;
+        }
+    }
+    & .animation190px285px {
+        animation: 12s Galerie190px ease-out infinite;
+        position: relative;
+
+        @media(min-width: 768px) {
+            animation: 12s Galerie380px ease-out infinite;
+        }
+    }
+
+    & .image {
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top:0;
+        display: inline;
+
+      
+
+    }
+}
+
+.galerie250px166px {
+    width: 250px;
+    height: 166px;
+
+    & .image {
+        @for $i from 0 to 3 {
+            &--#{$i} {
+                right: -250px*$i;
+            }
+        }
+    }
+
+    @media(min-width: 768px) {
+        width: 500px;
+        height: 332px;
+
+        & .image {
+            @for $i from 0 to 3 {
+                &--#{$i} {
+                    right: -500px*$i;
+                }
+            }
+        }
+    }
+}
+.galerie190px285px {
+    width: 190px;
+    height: 285px;
+
+    & .image {
+        @for $i from 0 to 3 {
+            &--#{$i} {
+                right: -190px*$i;
+            }
+        }
+    }
+    @media(min-width: 768px) {
+        width: 380px;
+        height: 570px;
+
+        & .image {
+            @for $i from 0 to 3 {
+                &--#{$i} {
+                    right: -380px*$i;
+                }
+            }
+        }
+    }
+}
