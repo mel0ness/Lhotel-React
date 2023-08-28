@@ -1,0 +1,16 @@
+@use "../../Utils/variables";
+
+.inputChambre {
+    background-color: variables.$color1;
+    color: white;
+    border: 1px solid red;
+    box-shadow: 0px 0px 5px 4px variables.$color1;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+
+}
+
+.selected {
+    background-color: #6caab3;
+}

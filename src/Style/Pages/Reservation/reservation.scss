@@ -1,0 +1,83 @@
+@use "../../Utils/variables";
+
+fieldset {
+border: 2px solid variables.$color1;
+border-radius: 10px;
+width: 85%;
+display: flex;
+margin: auto;
+margin-bottom: 10px;
+flex-direction: column;
+gap: 15px;
+font-size: 1.2rem;
+
+& legend {
+    font-size: 1.5rem;
+}
+
+& .required {
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: variables.$color1;
+    margin-left: 5px;
+}
+
+& .NoneStyleList {
+    list-style-type: none;
+    padding: 0;
+
+    & li {
+        margin-top: 10px;
+    }
+
+}
+
+& label {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+& input {
+    display: block;
+    margin: auto;
+}
+}
+
+.Nights {
+    & span {
+        display:block;
+        color: variables.$color1;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+}
+
+.information {
+    font-size: 0.8rem;
+}
+
+.Animaux {
+    height: 100px;
+    width: 100%;
+}
+
+button {
+    font-size: 1.3rem;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: solid 2px variables.$color1;
+    color: white;
+    background-color: variables.$color1;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px black;
+
+    &:active {
+        box-shadow: unset;
+        position: relative;
+        left: 2px;
+        top: 2px;
+    }
+}
