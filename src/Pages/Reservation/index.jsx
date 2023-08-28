@@ -94,13 +94,13 @@ const Reservation = () => {
               <label htmlFor="date"><span>Date d&apos;arrivée<span className="required">*</span>
                   :
                 </span></label>
-              <input type="date" id="date" name="reser_datee" value="" required/>
+              <input type="date" id="date" name="reser_datee" required/>
             </div>
             <div>
               <label htmlFor="date2"><span>Date de départ<span className="required">*</span>
                   :
                 </span></label>
-              <input type="date" id="date2" name="reser_dates" value="" required/>
+              <input type="date" id="date2" name="reser_dates" required/>
             </div>
             <div className="Nights">
               Nombre de Nuits :
