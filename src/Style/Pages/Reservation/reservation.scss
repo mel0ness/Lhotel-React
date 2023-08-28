@@ -45,11 +45,25 @@ font-size: 1.2rem;
 }
 
 .Nights {
-    & span {
+    & .inputInvisible {
         display:block;
         color: variables.$color1;
         font-size: 2rem;
         margin-top: 10px;
+        width: 80px;
+        appearance: unset;
+        background-color: unset;
+        border: unset;
+        text-align: center;
+        padding: unset;
+
+        
+    }
+
+    & .inline {
+        display: inline-block;
+        color: variables.$color1;
+        font-size: 2rem;
     }
 }
 
@@ -81,3 +95,57 @@ button {
         top: 2px;
     }
 }
+ .modaleOpened {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 0;
+
+    &:before {
+     content: "";
+     display: block;
+        background-color: grey ;
+        opacity: 0.5;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+       
+ }
+ }
+.modale {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: white;
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    padding-top: 30px;
+    border: 2px solid variables.$color1;
+    z-index: 2;
+
+    & .buttonType {
+    margin: auto;
+    margin-top: 15px;
+    border: solid 2px variables.$color1;
+    color: white;
+    background-color: variables.$color1;
+    padding:5px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px black;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:active {
+        box-shadow: unset;
+        left: calc(50% + 2px);
+        bottom: 17px;
+    }
+    }
+
+    }

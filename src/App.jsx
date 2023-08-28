@@ -7,6 +7,7 @@ import Error from './Pages/Error';
 import Chambres from './Pages/Chambres';
 import Reservation from './Pages/Reservation';
 import Mentions from "./Pages/Mentions";
+import Confirm from "./Pages/Confirm";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     <Route path='/Chambres'element={<Chambres />} />
     <Route path='/Reservation' element={<Reservation />} />
     <Route path='/Mentions' element={<Mentions />} />
+    <Route path='/Confirmation' element={<Confirm />} />
     <Route path='*' element={<Error />} />
 
   </Routes>

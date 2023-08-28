@@ -1,0 +1,19 @@
+@use "../../Utils/variables";
+
+.youpi {
+    margin: auto;
+    margin-top: 50px;
+    font-size: 1.5rem;
+}
+
+.back {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    & a {
+        text-decoration: none;
+        color: variables.$color1;
+    }
+
+}

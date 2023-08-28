@@ -1,13 +1,22 @@
 import {HelmetProvider} from "react-helmet-async"
 import InputChambre from "../../Components/InputChambre"
 import "../../Style/Pages/Reservation/reservation.scss"
-import {useState} from "react"
+import {useEffect, useState} from "react"
+import { Price } from "../../Features/Price/price"
+import { Nights } from "../../Features/Nights/nights"
+import { Validation } from "../../Features/Validation/validation"
 
 const Reservation = () => {
 
     const [checkedInput, ChangeCheckedInput] = useState("allClick1")
     const [checkedGender, updateCheckedGender] = useState("Male")
     const [checkedNimals, updateCheckedNimals] = useState("Non")
+    const [price, updatePrice] = useState(74)
+    const [dateArrival, updateDateArrival] = useState()
+    const [dateDeparture, updateDateDeparture] = useState()
+    const [numberNights, updateNumbreNights] = useState()
+    const [errorDates, updateErrorDates] = useState(true)
+    const [Modale, updateModale] = useState(false)
 
     const changementGender = (e) => {
         updateCheckedGender(e)
@@ -17,11 +26,33 @@ const Reservation = () => {
         updateCheckedNimals(e)
     }
 
+    const modale =(e) => {
+      e.preventDefault()
+      updateModale(true)
+    }
+
+    const fermetureModale =() => {
+      updateModale(false)
+    }
+
+
+    useEffect(() => {
+      Price(checkedInput, updatePrice, numberNights)
+Validation(dateArrival, dateDeparture, updateErrorDates)
+Nights(dateArrival, dateDeparture, updateNumbreNights)      
+    }, [checkedInput, dateArrival, dateDeparture, numberNights] )
+
+    
+
     return (<div>
 
         <HelmetProvider>
             <title>Réservation</title>
         </HelmetProvider>
+
+        {Modale? <div className="modaleOpened">
+          <div className="modale">Attention les dates renseignées ne correspondent pas (Vérifier les dates de départ et d&apos;arrivée)<div className="buttonType" onClick={() => fermetureModale()}>C&apos;est compris</div></div>
+          </div> : <div className="modaleClosed"></div>}
 
 <h1>Formulaire de reservation</h1>
 
@@ -94,21 +125,21 @@ const Reservation = () => {
               <label htmlFor="date"><span>Date d&apos;arrivée<span className="required">*</span>
                   :
                 </span></label>
-              <input type="date" id="date" name="reser_datee" required/>
+              <input type="date" id="date" name="reser_datee" onChange={(e) => updateDateArrival(e.target.value) } required/>
             </div>
             <div>
               <label htmlFor="date2"><span>Date de départ<span className="required">*</span>
                   :
                 </span></label>
-              <input type="date" id="date2" name="reser_dates" required/>
+              <input type="date" id="date2" name="reser_dates" onChange={(e) => updateDateDeparture(e.target.value) } required/>
             </div>
             <div className="Nights">
               Nombre de Nuits :
-              <span id="numberNightsTotal" name="nights">0</span>
+              <input type="text" id="numberNightsTotal" value={numberNights} name="nights" className="inputInvisible"></input>
             </div>
             <div className="Nights">
               Prix de la réservation souhaitée (Hors petits-déjeuners) :
-              <span id="price" name="price">0 €</span>
+              <div><input className="inputInvisible inline" type="text" id="price" name="price" value={price}></input><span className="inline">€</span></div>
             </div>
         
             <div className="information">
@@ -144,9 +175,12 @@ const Reservation = () => {
               <textarea id="msg" name="commentary" className="Animaux"></textarea>
             </div>
           </fieldset>
-          <button type="submit" id="btn">
+          {errorDates?  <button type="submit" id="btn" onClick={(e) => modale(e)}>
               Valider la réservation
-            </button>
+            </button> :  <button type="submit" id="btn">
+              Valider la réservation
+            </button>}
+         
 </form>
 
     </div>)

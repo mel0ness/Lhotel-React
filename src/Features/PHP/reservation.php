@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST['dontlie']) && $_POST['dontlie'] != ''){
-  header('location:confirm-reservation.html');
+  header('location: http://localhost:5173/Confirmation');
 } 
 else 
 if ($_SERVER['REQUEST_METHOD']=='POST') {
@@ -39,7 +39,7 @@ $newDates = date("d-m-Y", strtotime($dates));
         $contenu .= '<p><strong>telephone</strong>: '.$tel.'</p>';
         $contenu .= '<p><strong>Arrive le</strong>: '.$newDatee.'  dans la chambre : '.$chambre.'</p>';
         $contenu .= '<p><strong>Et repart le</strong>: '.$newDates.' pour '.$nights.' nuits</p>';
-        $contenu .= '<p><strong>Total estimé sans petits-déjeuners</strong>: '.$price.'</p>';
+        $contenu .= '<p><strong>Total estimé sans petits-déjeuners</strong>: '.$price.' €</p>';
         $contenu .= '<p><strong>pour</strong>: '.$adult.' adultes et '.$children.' enfants</p>';
         $contenu .= '<p><strong>avec des animaux?</strong>'.$paws.',  '.$nimals.'</p>';
       $contenu .= '<p><strong>Message ou questions supplémentaires</strong>: '.$message.'</p>';
@@ -52,7 +52,7 @@ $newDates = date("d-m-Y", strtotime($dates));
      
       // Envoyer l'email
       mail($destinataire, $demand, $contenu, $headers); // Fonction principale qui envoi l'email
-      header("location:confirm-reservation.html"); // Afficher un message pour indiquer que le message a été envoyé
+      header("location: http://localhost:5173/Confirmation"); // Afficher un message pour indiquer que le message a été envoyé
       // (2) Fin du code pour traiter l'envoi de l'email
     }
     ?>
