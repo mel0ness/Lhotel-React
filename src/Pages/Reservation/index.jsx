@@ -25,7 +25,7 @@ const Reservation = () => {
 
 <h1>Formulaire de reservation</h1>
 
-<form action="../../assets/reservation.php" method="post">
+<form action="https://www.lhotel-thouars.fr/test/reservation.php" method="post">
 <fieldset>
             <legend>Informations personelles</legend>
 
