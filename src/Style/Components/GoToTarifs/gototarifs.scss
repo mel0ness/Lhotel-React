@@ -1,0 +1,17 @@
+@use "../../Utils/variables";
+
+.ToTarifs {
+    margin-top: 25px;
+font-size: 1rem;
+
+@media(min-width: 1000px) {
+    font-size: 1.4rem;
+}
+@media(min-width: 1200px) {
+    font-size: 1.6rem;
+}
+}
+
+.LinkToTarifs {
+    color: variables.$color1;
+}

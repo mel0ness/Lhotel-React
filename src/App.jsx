@@ -8,6 +8,7 @@ import Chambres from './Pages/Chambres';
 import Reservation from './Pages/Reservation';
 import Mentions from "./Pages/Mentions";
 import Confirm from "./Pages/Confirm";
+import Tarifs from "./Pages/Tarifs";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
     <Route path='/Reservation' element={<Reservation />} />
     <Route path='/Mentions' element={<Mentions />} />
     <Route path='/Confirmation' element={<Confirm />} />
+    <Route path='/Tarifs' element={<Tarifs />} />
     <Route path='*' element={<Error />} />
 
   </Routes>

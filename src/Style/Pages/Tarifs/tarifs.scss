@@ -1,0 +1,63 @@
+@use "../../Utils/variables";
+
+.tableNormal {
+    display: none;
+    max-width: 80%;
+    margin:auto;
+    border-spacing: 0;
+    border: solid 3px variables.$color1;
+    font-size: 1.2rem;
+
+    
+    & th, td {
+        border: solid 2px variables.$color1;
+        padding: 5px;
+      
+    }
+    & .Titre {
+        color: white;
+        background-color: variables.$color1;
+        border-color: white;
+        font-weight: 400;
+    }
+
+    @media(min-width: 768px) {
+        display:table;
+    }
+    @media(min-width: 900px) {
+       font-size: 1.4rem;
+    }
+    @media(min-width: 1150px) {
+        font-size: 1.6rem;
+    }
+    @media(min-width: 1400px) {
+        font-size: 1.8rem;
+    }
+}
+
+.smartphone {
+    max-width: 80%;
+    margin:auto;
+    border-spacing: 0;
+    border: solid 3px variables.$color1;
+    font-size: 1.2rem;
+    
+
+    & th, td {
+        border: solid 2px variables.$color1;
+        padding: 5px;
+      
+    }
+
+
+    & .Titre {
+        color: white;
+        background-color: variables.$color1;
+        border-color: white;
+        font-weight: 400;
+    }
+
+    @media(min-width: 768px) {
+        display:none;
+    }
+}

@@ -1,5 +1,6 @@
 import {HelmetProvider} from "react-helmet-async"
 import Galerie from "../../Components/Galerie";
+import GoToTarifs from "../../Components/GoToTarifs";
 import Chambre1 from "../../assets/chambre1.jpg";
 import Chambre2 from "../../assets/chambre2.jpg"
 import Chambre3 from "../../assets/chambre3.jpg"
@@ -45,6 +46,7 @@ const alt6 = "Accueil"
                     <div className="listeChambres"><div className="nomChambre">Chambre supérieure XL :</div> 1 lit 160x200cm et un canapé lit supplémentaire</div>
                     <div className="listeChambres"><div className="nomChambre">Suite familiale :</div> 1 lit 140x190cm et 2 lits 90x190cm</div>
                 </div>
+<GoToTarifs />
 <div className="separatorServices"></div>
                 <div className="grid">
 <img src={Grid1} alt="café" className="grid1"></img>

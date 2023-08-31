@@ -14,7 +14,7 @@ setTimeout(() => {
     navigate("./Reservation")
 }
 
-,1500)
+,500)
 }
 
     return (
