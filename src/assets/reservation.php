@@ -29,8 +29,8 @@ $newDates = date("d-m-Y", strtotime($dates));
          $dontlie = htmlentities($_POST['dontlie']);
      
       // Variables concernant l'email
-      // lhotel.thouars@gmail.com
-      $destinataire = 'spasmodic51@gmail.com'; // Adresse email du webmaster (à personnaliser)
+      
+      $destinataire = 'lhotel.thouars@gmail.com'; // Adresse email du webmaster (à personnaliser)
         $demand = 'Reservation';
       $contenu = '<html><head><title> Reservation </title></head><body>';
       $contenu .= '<p>Vous avez une reservation</p>';

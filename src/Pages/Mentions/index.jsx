@@ -1,7 +1,10 @@
 import {HelmetProvider} from "react-helmet-async"
 import "../../Style/Pages/Mentions/mentions.scss"
+import scrollTop from "../../Features/scrollTop"
 
 const Mentions = () => {
+
+    scrollTop();
 
     return (<div>
 
