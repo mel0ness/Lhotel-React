@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST['dontlie']) && $_POST['dontlie'] != ''){
-  header('location: http://localhost:5173/Confirmation');
+  header('location: https://lhotel-thouars.netlify.app/Confirmation');
 } 
 else 
 if ($_SERVER['REQUEST_METHOD']=='POST') {
@@ -29,7 +29,7 @@ $newDates = date("d-m-Y", strtotime($dates));
          $dontlie = htmlentities($_POST['dontlie']);
      
       // Variables concernant l'email
-     
+      // lhotel.thouars@gmail.com
       $destinataire = 'spasmodic51@gmail.com'; // Adresse email du webmaster (à personnaliser)
         $demand = 'Reservation';
       $contenu = '<html><head><title> Reservation </title></head><body>';
@@ -52,7 +52,7 @@ $newDates = date("d-m-Y", strtotime($dates));
      
       // Envoyer l'email
       mail($destinataire, $demand, $contenu, $headers); // Fonction principale qui envoi l'email
-      header("location: http://localhost:5173/Confirmation"); // Afficher un message pour indiquer que le message a été envoyé
+      header("location: https://lhotel-thouars.netlify.app/Confirmation"); // Afficher un message pour indiquer que le message a été envoyé
       // (2) Fin du code pour traiter l'envoi de l'email
     }
     ?>

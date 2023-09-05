@@ -37,9 +37,11 @@ const Reservation = () => {
     }
 
 
+
     useEffect(() => {
+
       Price(checkedInput, updatePrice, numberNights)
-Validation(dateArrival, dateDeparture, updateErrorDates)
+      Validation(dateArrival, dateDeparture, updateErrorDates) 
 Nights(dateArrival, dateDeparture, updateNumbreNights)      
     }, [checkedInput, dateArrival, dateDeparture, numberNights] )
 
