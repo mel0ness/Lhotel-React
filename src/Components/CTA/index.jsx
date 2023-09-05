@@ -1,6 +1,7 @@
 import "../../Style/Components/CTA/cta.scss"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import scrollTop from "../../Features/scrollTop"
 
 const Cta = () => {
 
@@ -11,6 +12,7 @@ const redirect = () => {
 setAnimation(true)
 
 setTimeout(() => {
+    scrollTop();
     navigate("./Reservation")
 }
 
