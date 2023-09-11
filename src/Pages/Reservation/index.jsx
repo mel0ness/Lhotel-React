@@ -17,7 +17,9 @@ const Reservation = () => {
     const [dateDeparture, updateDateDeparture] = useState()
     const [numberNights, updateNumbreNights] = useState()
     const [errorDates, updateErrorDates] = useState(true)
+    const [datesFerme, updatedatesFerme] = useState(true)
     const [Modale, updateModale] = useState(false)
+    const [ModaleFerme, updateModaleFerme] = useState(false)
 
     const changementGender = (e) => {
         updateCheckedGender(e)
@@ -29,11 +31,16 @@ const Reservation = () => {
 
     const modale =(e) => {
       e.preventDefault()
-      updateModale(true)
+      if(datesFerme) {
+        updateModaleFerme(true)
+      }
+      else {
+      updateModale(true)}
     }
 
     const fermetureModale =() => {
       updateModale(false)
+      updateModaleFerme(false)
     }
 
 
@@ -41,7 +48,7 @@ const Reservation = () => {
     useEffect(() => {
 
       Price(checkedInput, updatePrice, numberNights)
-      Validation(dateArrival, dateDeparture, updateErrorDates) 
+      Validation(dateArrival, dateDeparture, updateErrorDates, updatedatesFerme) 
 Nights(dateArrival, dateDeparture, updateNumbreNights)      
     }, [checkedInput, dateArrival, dateDeparture, numberNights] )
 
@@ -55,6 +62,9 @@ Nights(dateArrival, dateDeparture, updateNumbreNights)
 
         {Modale? <div className="modaleOpened"> 
           <div className="modale">Attention les dates renseignées ne correspondent pas (Vérifier les dates de départ et d&apos;arrivée)<div className="buttonType" onClick={() => fermetureModale()}>C&apos;est compris</div></div>
+          </div> : <div className="modaleClosed"></div>}
+        {ModaleFerme? <div className="modaleOpened"> 
+          <div className="modale">Attention des dates sont indisponnibles (Vérifier les dates de départ et d&apos;arrivée dans la page de tarification)<div className="buttonType" onClick={() => fermetureModale()}>C&apos;est compris</div></div>
           </div> : <div className="modaleClosed"></div>}
 
 <h1>Formulaire de reservation</h1>

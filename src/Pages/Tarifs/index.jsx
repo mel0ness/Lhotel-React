@@ -33,6 +33,10 @@ const Tarifs = () => {
         <th scope="row">Taxe de séjour par nuité par personne</th>
         <td>0,80€</td>
       </tr>
+      <tr>
+        <th scope="row">LHotel est fermé les dates suivantes :</th>
+        <td>Les soirs du 30 Septembre et du premier Octobre</td>
+      </tr>
     </table>
 
     <table className="tableNormal">
@@ -58,6 +62,10 @@ const Tarifs = () => {
       <tr>
         <th scope="row">Taxe de séjour par nuité par personne</th>
         <td colSpan="4" className="boldy">0,80€</td>
+      </tr>
+      <tr>
+        <th scope="row">LHotel est fermé les dates suivantes :</th>
+        <td colSpan='4'>Les soirs du 30 Septembre et du premier Octobre</td>
       </tr>
       </tbody>
     </table>
