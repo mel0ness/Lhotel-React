@@ -37,6 +37,10 @@ const Tarifs = () => {
         <th scope="row">LHotel est fermé les dates suivantes :</th>
         <td>Les soirs du 30 Septembre et du premier Octobre</td>
       </tr>
+      <tr>
+        <th scope="row">LHotel est fermé les dates suivantes :</th>
+        <td colSpan='4'>Du 29 Octobre au 6 Novembre (inclus)</td>
+      </tr>
     </table>
 
     <table className="tableNormal">
@@ -66,6 +70,10 @@ const Tarifs = () => {
       <tr>
         <th scope="row">LHotel est fermé les dates suivantes :</th>
         <td colSpan='4'>Les soirs du 30 Septembre et du premier Octobre</td>
+      </tr>
+      <tr>
+        <th scope="row">LHotel est fermé les dates suivantes :</th>
+        <td colSpan='4'>Du 29 Octobre au 6 Novembre (inclus)</td>
       </tr>
       </tbody>
     </table>

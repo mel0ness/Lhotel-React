@@ -19,6 +19,18 @@ else if (Date.parse(e) < Date.parse("2023-09-30") && Date.parse(h) > Date.parse(
 f(true)    
 g(true)
 }
+else if (Date.parse("2023-10-29") <= Date.parse(e) && Date.parse(e) <= Date.parse("2023-11-06")) {
+f(true)    
+g(true)
+}
+else if (Date.parse("2023-10-29") < Date.parse(h) && Date.parse(h) <= Date.parse("2023-11-06")) {
+f(true)    
+g(true)
+}
+else if (Date.parse(e) < Date.parse("2023-10-29") && Date.parse(h) > Date.parse("2023-11-06")) {
+f(true)    
+g(true)
+}
 
 else {
     f(false)
