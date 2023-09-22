@@ -10,11 +10,11 @@ const Services = () => {
         <div className="servicesBlock">
             <h1>Services Proposés par l&apos;Hôtel</h1>
             <div className="services">
-            <div className="service"><img src={Service1} alt></img><span className="invisible">Service Wifi gratuit</span></div>
-            <div className="service"><img src={Service2} alt></img><span className="invisible">Smart télévisions</span></div>
-            <div className="service"><img src={Service3} alt></img><span className="invisible">Accueil possible d&apos;animaux</span></div>
-            <div className="service"><img src={Service4} alt></img><span className="invisible">Service bar</span></div>
-            <div className="service"><img src={Service5} alt></img><span className="invisible">Canal+ compris</span></div>
+            <div className="service"><img src={Service1} alt="wifi"></img><span className="invisible">Service Wifi gratuit</span></div>
+            <div className="service"><img src={Service2} alt="television"></img><span className="invisible">Smart télévisions</span></div>
+            <div className="service"><img src={Service3} alt="paws"></img><span className="invisible">Accueil possible d&apos;animaux</span></div>
+            <div className="service"><img src={Service4} alt="bar"></img><span className="invisible">Service bar</span></div>
+            <div className="service"><img src={Service5} alt="canal"></img><span className="invisible">Canal+ compris</span></div>
          </div></div>
     )
 }
