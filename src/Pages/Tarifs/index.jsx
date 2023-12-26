@@ -33,18 +33,6 @@ const Tarifs = () => {
         <th scope="row">Taxe de séjour par nuité par personne</th>
         <td>0,80€</td>
       </tr>
-      <tr>
-        <th scope="row">LHotel est fermé les dates suivantes :</th>
-        <td colSpan='4'>Du 29 Octobre au 6 Novembre (inclus)</td>
-      </tr>
-      <tr>
-        <th scope="row">LHotel est fermé les dates suivantes :</th>
-        <td>Du 18 Décembre au 22 Décembre (inclus)</td>
-      </tr>
-      <tr>
-        <th scope="row">LHotel est fermé les dates suivantes :</th>
-        <td>Du 30 Décembre au 2 Janvier 2024 (inclus)</td>
-      </tr>
     </table>
 
     <table className="tableNormal">
@@ -70,18 +58,6 @@ const Tarifs = () => {
       <tr>
         <th scope="row">Taxe de séjour par nuité par personne</th>
         <td colSpan="4" className="boldy">0,80€</td>
-      </tr>
-      <tr>
-        <th scope="row">LHotel est fermé les dates suivantes :</th>
-        <td colSpan='4'>Du 29 Octobre au 6 Novembre (inclus)</td>
-      </tr>
-      <tr>
-        <th scope="row">LHotel est fermé les dates suivantes :</th>
-        <td colSpan='4'>Du 18 Décembre au 22 Décembre (inclus)</td>
-      </tr>
-      <tr>
-        <th scope="row">LHotel est fermé les dates suivantes :</th>
-        <td colSpan='4'>Du 30 Décembre au 2 Janvier 2024 (inclus)</td>
       </tr>
       </tbody>
     </table>
