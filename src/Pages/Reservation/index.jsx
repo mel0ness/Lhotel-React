@@ -102,14 +102,14 @@ Nights(dateArrival, dateDeparture, updateNumbreNights)
               <input type="text" id="prenom" name="name_user2" required />
             </div>
             <div className="flexInput">
-              <label htmlFor="mail">Mail de contact :</label>
-              <input type="email" id="mail" name="mail_user" />
+              <label htmlFor="mail">Mail de contact <span className="required">*</span>:</label>
+              <input type="email" id="mail" name="mail_user" required />
             </div>
             <div className="flexInput">
-              <label htmlFor="tel">Numéro de téléphone<span className="required">*</span>
+              <label htmlFor="tel">Numéro de téléphone
                 :
               </label>
-              <input type="tel" id="tel" name="tel_user" required
+              <input type="tel" id="tel" name="tel_user"
                 pattern="0[0-9][ -/]*[0-9]{2}[ -/]*[0-9]{2}[ -/]*[0-9]{2}[ -/]*[0-9]{2}" />
             </div>
           </fieldset>
