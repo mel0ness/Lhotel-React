@@ -1,4 +1,5 @@
 import "../../Style/Pages/Tarifs/tarifs.scss"
+import warning from "../../assets/warning.svg";
 
 const Tarifs = () => {
 
@@ -33,6 +34,10 @@ const Tarifs = () => {
         <th scope="row">Taxe de séjour par nuité par personne</th>
         <td>0,80€</td>
       </tr>
+      <tr>
+        <th scope="row" rowSpan="1" className="flexRow"><img src={warning} alt="warning" className="warningtarifs" />Fermeture pour travaux</th>
+        <td>A partir du 10 Janvier 2024 pour durée indéterminée</td>
+      </tr>
     </table>
 
     <table className="tableNormal">
@@ -58,6 +63,10 @@ const Tarifs = () => {
       <tr>
         <th scope="row">Taxe de séjour par nuité par personne</th>
         <td colSpan="4" className="boldy">0,80€</td>
+      </tr>
+      <tr>
+        <th scope="row" className="flexRow"><img src={warning} alt="warning" className="warningtarifs" />Fermeture pour travaux</th>
+        <td colSpan="4">A partir du 10 Janvier 2024 pour durée indéterminée</td>
       </tr>
       </tbody>
     </table>

@@ -1,0 +1,43 @@
+@use "../../Utils/variables";
+@use "../../Utils/mixins";
+
+.warning {
+
+    &-home{
+        @include mixins.warning;
+        width: 50%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        gap: 30px;
+        padding: 40px;
+    }
+
+    &-reser {
+        @include mixins.warning;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        gap: 10px;
+        padding: 20px;
+
+    }
+   
+}
+
+.warningimg {
+
+    &-home{
+    width: 100px;}
+
+    &-reser {
+        width: 50px;
+    }
+}
+
+.warningtxt {
+
+    &-home {
+    font-size: 22px;
+    @media(min-width: 600px) {
+        font-size: 28px;
+    }}
+}
