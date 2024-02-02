@@ -36,7 +36,7 @@ const Tarifs = () => {
       </tr>
       <tr>
         <th scope="row" rowSpan="1" className="flexRow"><img src={warning} alt="warning" className="warningtarifs" />Fermeture pour travaux</th>
-        <td>A partir du 10 Janvier 2024 pour durée indéterminée</td>
+        <td>Sera à nouveau ouvert à partir du lundi 5 Février 2024.</td>
       </tr>
     </table>
 
@@ -66,7 +66,7 @@ const Tarifs = () => {
       </tr>
       <tr>
         <th scope="row" className="flexRow"><img src={warning} alt="warning" className="warningtarifs" />Fermeture pour travaux</th>
-        <td colSpan="4">A partir du 10 Janvier 2024 pour durée indéterminée</td>
+        <td colSpan="4">Sera à nouveau ouvert à partir du lundi 5 Février 2024.</td>
       </tr>
       </tbody>
     </table>

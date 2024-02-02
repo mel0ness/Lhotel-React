@@ -8,8 +8,14 @@ if(Date.parse(e) < Date.parse(tomorrow) || Date.parse(e) >= Date.parse(h)) {
     f(true)
     g(false)
 }
-else if (Date.parse("2024-01-10") <= Date.parse(e)) {
-f(true)    
+else if (Date.parse("2024-02-05") <= Date.parse(e)) {
+
+f(false)    
+g(false)
+}
+else if (Date.parse("2024-02-05") > Date.parse(e)) {
+
+f(false)    
 g(true)
 }
 // else if (Date.parse("2023-10-29") < Date.parse(h) && Date.parse(h) <= Date.parse("2023-11-06")) {
