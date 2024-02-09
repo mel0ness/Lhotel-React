@@ -1,6 +1,6 @@
 import {HelmetProvider} from "react-helmet-async"
 import InputChambre from "../../Components/InputChambre"
-import Warning from "../../Components/warning"
+// import Warning from "../../Components/warning"
 import "../../Style/Pages/Reservation/reservation.scss"
 import {useEffect, useState} from "react"
 import { Price } from "../../Features/Price/price"
@@ -155,7 +155,7 @@ Nights(dateArrival, dateDeparture, updateNumbreNights)
               Prix de la réservation souhaitée (Hors petits-déjeuners) :
               <div><input className="inputInvisible inline" type="text" id="price" name="price" value={price + "€"}></input></div>
             </div>
-            <Warning style={"reser"} />
+            {/* <Warning style={"reser"} /> */}
         <GoToTarifs />
             <div className="information">
               Le prix n&apos;inclus pas la taxe de séjour.
